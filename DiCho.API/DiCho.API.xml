@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DiCho.API</name>
+    </assembly>
+    <members>
+        <member name="M:DiCho.API.Controllers.CampaignsController.Gets(DiCho.DataService.ViewModels.CampaignModel,System.Int32,System.Int32)">
+            <summary>
+            get campaigns
+            </summary>
+            <param name="model"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.CampaignsController.GetsByDeliveryZone(System.String,System.Int32,System.Int32)">
+            <summary>
+            get campaigns belong to delivery zone
+            </summary>
+            <param name="zoneName"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.CampaignsController.GetById(System.Int32)">
+            <summary>
+            get a campaign by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.CampaignsController.Create(DiCho.DataService.ViewModels.CampaignCreateModel)">
+            <summary>
+            create a campaign
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.CampaignsController.Update(System.Int32,DiCho.DataService.ViewModels.CampaignUpdateModel)">
+            <summary>
+            update a campaign
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.CampaignsController.Delete(System.Int32)">
+            <summary>
+            delete a campaign
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FarmsController.Gets(DiCho.DataService.ViewModels.FarmModel,System.Int32,System.Int32)">
+            <summary>
+            get farms
+            </summary>
+            <param name="model"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FarmsController.GetById(System.Int32)">
+            <summary>
+            get a farm by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FarmsController.Create(DiCho.DataService.ViewModels.FarmCreateInputModel)">
+            <summary>
+            create a farm
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FarmsController.Update(System.Int32,DiCho.DataService.ViewModels.FarmUpdateInputModel)">
+            <summary>
+            update a farm
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FarmsController.Delete(System.Int32)">
+            <summary>
+            delete a farm
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FarmsController.GetName(DiCho.DataService.ViewModels.FarmNameModel)">
+            <summary>
+            get farms name
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FeedbacksController.Gets(DiCho.DataService.ViewModels.FeedbackModel,System.Int32,System.Int32)">
+            <summary>
+            get feedbacks
+            </summary>
+            <param name="model"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.FirebasesController.Upload(Microsoft.AspNetCore.Http.IFormFileCollection,System.String)">
+            <summary>
+            upload images to firebase
+            </summary>
+            <param name="files"></param>
+            <param name="folder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestCampaignsController.Gets(DiCho.DataService.ViewModels.HarvestCampaignModel,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Int32,System.Int32)">
+            <summary>
+            get harvests in campaign
+            </summary>
+            <param name="model"></param>
+            <param name="categorys"></param>
+            <param name="farms"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestCampaignsController.GetById(System.Int32)">
+            <summary>
+            get a harvest in campaign by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestCampaignsController.Create(DiCho.DataService.ViewModels.HarvestCampaignCreateModel)">
+            <summary>
+            add a harvest into campaign
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestCampaignsController.Update(System.Int32,DiCho.DataService.ViewModels.HarvestCampaignUpdateModel)">
+            <summary>
+            update a harvest in camapaign
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestCampaignsController.Delete(System.Int32)">
+            <summary>
+            delete a harvest in campaign
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestsController.Gets(System.String,DiCho.DataService.ViewModels.HarvestModel,System.Int32,System.Int32)">
+            <summary>
+            get harvests
+            </summary>
+            <param name="model"></param>
+            <param name="farmerId"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestsController.GetById(System.Int32)">
+            <summary>
+            get a harvest
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestsController.Create(DiCho.DataService.ViewModels.HarvestCreateInputModel)">
+            <summary>
+            create a harvest
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestsController.Update(System.Int32,DiCho.DataService.ViewModels.HarvestUpdateInputModel)">
+            <summary>
+            update a harvest
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.HarvestsController.Delete(System.Int32)">
+            <summary>
+            delete a harvest
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ItemCartsController.Gets(System.String)">
+            <summary>
+            get items cart
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ItemCartsController.Create(DiCho.DataService.ViewModels.ItemCartCreateModel)">
+            <summary>
+            add a item to cart
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ItemCartsController.Update(System.Int32,DiCho.DataService.ViewModels.ItemCartUpdateModel)">
+            <summary>
+            update a item in cart
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ItemCartsController.Delete(System.Int32)">
+            <summary>
+            delete a item in cart
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ItemCartsController.Count(System.String)">
+            <summary>
+            count item in cart
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.OrdersController.Gets(DiCho.DataService.ViewModels.OrderModel,System.Int32,System.Int32)">
+            <summary>
+            get orders
+            </summary>
+            <param name="model"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.OrdersController.GetById(System.Int32)">
+            <summary>
+            get a order by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.OrdersController.Create(DiCho.DataService.ViewModels.OrderCreateModelInput)">
+            <summary>
+            create a order
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.OrdersController.Update(System.Int32,DiCho.DataService.ViewModels.OrderUpdateModel)">
+            <summary>
+            change status for order
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.OrdersController.Delete(System.Int32)">
+            <summary>
+            reject/cancel a order
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.PaymentsController.Gets">
+            <summary>
+            get payments
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.PaymentsController.GetById(System.Int32)">
+            <summary>
+            get a payment by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductCategoriesController.Gets(DiCho.DataService.ViewModels.ProductCategoryModel,System.Int32,System.Int32)">
+            <summary>
+            get categories product
+            </summary>
+            <param name="model"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductCategoriesController.GetById(System.Int32)">
+            <summary>
+            get a category by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductCategoriesController.Create(DiCho.DataService.ViewModels.ProductCategoryCreateModel)">
+            <summary>
+            create a category
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductCategoriesController.Update(System.Int32,DiCho.DataService.ViewModels.ProductCategoryUpdateModel)">
+            <summary>
+            update a category
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductCategoriesController.Delete(System.Int32)">
+            <summary>
+            delete a category
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductSystemsController.Gets(DiCho.DataService.ViewModels.ProductSystemModel,System.Int32,System.Int32)">
+            <summary>
+            get products
+            </summary>
+            <param name="model"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductSystemsController.GetById(System.Int32)">
+            <summary>
+            get a product by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductSystemsController.Create(DiCho.DataService.ViewModels.ProductSystemCreateModel)">
+            <summary>
+            create a product
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductSystemsController.Update(System.Int32,DiCho.DataService.ViewModels.ProductSystemUpdateModel)">
+            <summary>
+            update a product
+            </summary>
+            <param name="id"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.ProductSystemsController.Delete(System.Int32)">
+            <summary>
+            delete a farm
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.Create(DiCho.DataService.ViewModels.AspNetUsersCreateModel)">
+            <summary>
+            register a user
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.Login(DiCho.DataService.ViewModels.AspNetUserLoginModel)">
+            <summary>
+            login
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.UpdateUser(System.String,DiCho.DataService.ViewModels.AspNetUsersUpdateInputModel)">
+            <summary>
+            update a user
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.ConfirmPassword(DiCho.DataService.ViewModels.AspNetUsersConfirmPasswordModel)">
+            <summary>
+            confirm password a user
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.ChangePassword(DiCho.DataService.ViewModels.AspNetUsersChangePasswordModel)">
+            <summary>
+            change password a user
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.ForgotPassword(System.String)">
+            <summary>
+            forgot password
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.ConfirmForgotPassword(System.String,System.String,System.String)">
+            <summary>
+            confirm forgot password
+            </summary>
+            <param name="username"></param>
+            <param name="token"></param>
+            <param name="newPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiCho.API.Controllers.UsersController.VerifyPhone(System.String,System.String)">
+            <summary>
+            verify phone number
+            </summary>
+            <param name="id"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
